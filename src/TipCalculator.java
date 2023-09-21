@@ -18,9 +18,10 @@ public class TipCalculator {
             cost = scan.nextDouble();
         }
         System.out.println("---------------------------------");
-        System.out.println("Total before tip: " + total );
+        System.out.println("Total before tip: $" + total );
         System.out.println("Total percentage: " + percent + "%");
         double tip = total * ((double)percent / 100);
-        System.out.println("Total Tip: " + tip);
+        tip /= 1.00;
+        System.out.println("Total Tip: $" + tip);
     }
 }
