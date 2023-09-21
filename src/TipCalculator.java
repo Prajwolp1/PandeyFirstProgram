@@ -8,7 +8,7 @@ public class TipCalculator {
         int people = scan.nextInt();
 
         System.out.print("What is your tip percentage? (0-100) ");
-        int tip = scan.nextInt();
+        int percent = scan.nextInt();
 
         double cost = 0;
         double total = 0;
@@ -17,8 +17,10 @@ public class TipCalculator {
             System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
             cost = scan.nextDouble();
         }
-
-        System.out.print("Your total will be " + total );
-
+        System.out.println("---------------------------------");
+        System.out.println("Total before tip: " + total );
+        System.out.println("Total percentage: " + percent + "%");
+        double tip = total * ((double)percent / 100);
+        System.out.println("Total Tip: " + tip);
     }
 }
