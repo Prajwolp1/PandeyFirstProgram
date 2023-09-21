@@ -20,8 +20,12 @@ public class TipCalculator {
         System.out.println("---------------------------------");
         System.out.println("Total before tip: $" + total );
         System.out.println("Total percentage: " + percent + "%");
-        double tip = total * ((double)percent / 100);
-        tip /= 1.00;
-        System.out.println("Total Tip: $" + tip);
+        double tip = total * ((double)percent / 100.0);
+        if (tip % 10.00 > 0.005 )    {
+            System.out.println("Total Tip: $" + ((tip * 100)  ));
+        }
+        else {
+
+        }
     }
 }
