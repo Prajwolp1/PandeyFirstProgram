@@ -84,8 +84,9 @@ public class TipCalculator {
             }
         //prints out the final rating
         System.out.println("---------------------------------");
-        double FinalRating = Math.round((rating/menu.size()) / scale) / scale;
-        System.out.println("Overall you gave this restaurant: " +  FinalRating+ "* out of 5*.");
+        double FinalRating = (rating/menu.size());
+        FinalRating = Math.round(FinalRating * scale) / scale;
+        System.out.println("Overall you gave this restaurant: " + FinalRating  + "* out of 5*.");
         System.out.println("---------------------------------");
         }
     }
